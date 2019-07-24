@@ -36,6 +36,7 @@ export const handler = async (argv: StaticNodesArgv) => {
   const outputDirPath = argv.outputDir
   const outputFileName = argv.outputFileName
 
+  /* tslint:disable-next-line */
   getEnodesWithExternalIPAddresses(namespace).then((enodes) => {
     writeStaticNodes(
       enodes,
