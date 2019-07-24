@@ -130,11 +130,11 @@ export function getPendingRequests() {
   return pendingRequests
 }
 
-export function setPaymentRequestNotified(uid: string) {
-  database.ref(`/pendingRequests/${uid}`).update({ notified: true })
+export async function setPaymentRequestNotified(uid: string) {
+  await database.ref(`/pendingRequests/${uid}`).update({ notified: true })
 }
 
-export function setLastBlockNotified(newBlock: number) {
+export async function setLastBlockNotified(newBlock: number) {
   if (newBlock <= lastBlockNotified) {
     console.debug('Block number less than latest, skipping latestBlock update.')
     return
@@ -145,7 +145,7 @@ export function setLastBlockNotified(newBlock: number) {
   // we set it here ourselves to avoid race condition where we check for notifications
   // again before it syncs
   lastBlockNotified = newBlock
-  lastBlockRef.set(newBlock)
+  await lastBlockRef.set(newBlock)
 }
 
 export async function sendPaymentNotification(

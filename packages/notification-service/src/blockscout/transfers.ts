@@ -69,7 +69,7 @@ function filterAndJoinTransfers(
   return filteredGold.concat(filterdStable)
 }
 
-function notifyForNewTransfers(transfers: Transfer[], lastBlockNotified: number) {
+async function notifyForNewTransfers(transfers: Transfer[], lastBlockNotified: number) {
   for (const t of transfers) {
     // Skip transactions for which we've already sent notifications
     if (!t || t.blockNumber <= lastBlockNotified) {
@@ -82,7 +82,7 @@ function notifyForNewTransfers(transfers: Transfer[], lastBlockNotified: number)
       blockNumber: String(t.blockNumber),
       timestamp: String(t.timestamp),
     }
-    sendPaymentNotification(
+    await sendPaymentNotification(
       t.recipient,
       convertWeiValue(t.value),
       t.currency,
@@ -117,6 +117,6 @@ export async function handleTransferNotifications() {
 
   const allTransfers = filterAndJoinTransfers(goldTransfers, stableTransfers)
 
-  notifyForNewTransfers(allTransfers, lastBlockNotified)
-  setLastBlockNotified(Math.max(goldTransfersLatestBlock, stableTransfersLatestBlock))
+  await notifyForNewTransfers(allTransfers, lastBlockNotified)
+  await setLastBlockNotified(Math.max(goldTransfersLatestBlock, stableTransfersLatestBlock))
 }
