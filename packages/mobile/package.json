@@ -163,7 +163,7 @@
     "escape-string-regexp": "^1.0.5",
     "graphql-code-generator": "^0.16.1",
     "jest": "^24.8.0",
-    "jest-fetch-mock": "^2.1.2",
+    "jest-fetch-mock": "^3.0.0",
     "jest-junit": "^6.3.0",
     "jest-snapshot": "^24.8.0",
     "metro-react-native-babel-preset": "^0.53.1",
