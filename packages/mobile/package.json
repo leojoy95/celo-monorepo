@@ -32,10 +32,11 @@
     "test:detox": "CELO_TEST_CONFIG=e2e detox test -c android.emu.debug -a e2e/tmp/ --take-screenshots=failing --record-logs=failing --detectOpenHandles",
     "test:unlock": "./scripts/unlock.sh",
     "deploy:update-version": "./scripts/update-version.sh",
-    "prepare": "patch-package",
+    "prepare": "npm run snyk-protect && patch-package",
     "postinstall": "sh scripts/fix_rn_version.sh; patch-package",
     "update-disclaimer": "yarn licenses generate-disclaimer > LicenseDisclaimer.txt && mkdir -p android/app/src/main/assets/custom && cp LicenseDisclaimer.txt android/app/src/main/assets/custom/LicenseDisclaimer.txt",
-    "test-licenses": "yarn licenses list --prod | grep '\\(─ GPL\\|─ (GPL-[1-9]\\.[0-9]\\+ OR GPL-[1-9]\\.[0-9]\\+)\\)' && echo 'Found GPL license(s). Use 'yarn licenses list --prod' to look up the offending package' || echo 'No GPL licenses found'"
+    "test-licenses": "yarn licenses list --prod | grep '\\(─ GPL\\|─ (GPL-[1-9]\\.[0-9]\\+ OR GPL-[1-9]\\.[0-9]\\+)\\)' && echo 'Found GPL license(s). Use 'yarn licenses list --prod' to look up the offending package' || echo 'No GPL licenses found'",
+    "snyk-protect": "snyk-protect"
   },
   "rnpm": {
     "assets": [
@@ -45,7 +46,7 @@
   "dependencies": {
     "@celo/client": "4fd835d",
     "@celo/client-integration": "npm:@celo/client@55cf94c",
-    "@celo/contractkit": "0.0.1",
+    "@celo/contractkit": "1.2.2",
     "@celo/react-native-sms-retriever": "git+https://github.com/celo-org/react-native-sms-retriever#d3a2fdb",
     "@celo/utils": "0.0.1",
     "@react-native-community/netinfo": "^2.0.4",
@@ -77,7 +78,7 @@
     "react": "16.8.3",
     "react-apollo": "^2.4.1",
     "react-i18next": "^8.3.8",
-    "react-native": "0.59.10",
+    "react-native": "0.60.0",
     "react-native-android-broadcast-receiver-for-referrer": "^1.0.7",
     "react-native-android-open-settings": "^1.2.0",
     "react-native-autocomplete-input": "^3.6.0",
@@ -101,7 +102,7 @@
     "react-native-modal-dropdown": "^0.6.2",
     "react-native-permissions": "^1.1.1",
     "react-native-progress": "^3.4.0",
-    "react-native-qrcode-svg": "^5.1.2",
+    "react-native-qrcode-svg": "^6.0.6",
     "react-native-restart-android": "^0.0.7",
     "react-native-screens": "^1.0.0-alpha.22",
     "react-native-secure-randombytes": "^2.2.3",
@@ -130,7 +131,8 @@
     "tslib": "^1.9.1",
     "utf8": "^3.0.0",
     "vm-browserify": "^1.0.1",
-    "web3": "1.0.0-beta.37"
+    "web3": "1.6.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
@@ -200,5 +202,6 @@
         "name": "Nexus_5X_API_28"
       }
     }
-  }
+  },
+  "snyk": true
 }
