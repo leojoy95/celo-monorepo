@@ -22,7 +22,9 @@
     "postinstall": "yarn run lerna --concurrency 1 run postinstall && patch-package && sh scripts/custom_patch_packages.sh && yarn keys:decrypt",
     "preinstall": "bash scripts/create_key_templates.sh",
     "keys:decrypt": "bash scripts/key_placer.sh decrypt",
-    "keys:encrypt": "bash scripts/key_placer.sh encrypt" 
+    "keys:encrypt": "bash scripts/key_placer.sh encrypt",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -49,20 +51,22 @@
   },
   "devDependencies": {
     "husky": "^3.0.0",
-    "lerna": "^3.16.0",
+    "lerna": "^5.5.2",
     "patch-package": "^5.1.1",
     "postinstall-postinstall": "^1.0.0",
     "prettier": "1.13.5",
     "pretty-quick": "^1.11.1",
-    "solc": "0.5.8",
+    "solc": "0.5.11",
     "tslint": "^5.12.1",
     "typescript-tslint-plugin": "^0.5.0"
   },
   "dependencies": {
-    "codecov": "^3.1.0"
+    "codecov": "^3.1.0",
+    "@snyk/protect": "latest"
   },
   "resolutions": {
     "node-gyp": "5.0.1",
     "tar": "4.4.10"
-  }
+  },
+  "snyk": true
 }
