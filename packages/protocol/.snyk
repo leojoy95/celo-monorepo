@@ -1,0 +1,20 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:extend:20180424':
+    - truffle-security > truffle-compile-vyper > truffle-compile > truffle-config > truffle-provider > truffle-interface-adapter > web3 > web3-bzz > swarm-js > eth-lib > servify > request > extend:
+        patched: '2023-05-25T05:26:14.918Z'
+  SNYK-JS-LODASH-567746:
+    - eth-gas-reporter > abi-decoder > babel-core > babel-generator > babel-types > lodash:
+        patched: '2023-05-25T05:26:14.918Z'
+    - eth-gas-reporter > abi-decoder > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2023-05-25T05:26:14.918Z'
+    - eth-gas-reporter > abi-decoder > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2023-05-25T05:26:14.918Z'
+    - truffle-security > truffle-compile-vyper > truffle-compile > truffle-config > lodash:
+        patched: '2023-05-25T05:26:14.918Z'
+  'npm:stringstream:20180511':
+    - truffle-security > truffle-compile-vyper > truffle-compile > truffle-config > truffle-provider > truffle-interface-adapter > web3 > web3-bzz > swarm-js > eth-lib > servify > request > stringstream:
+        patched: '2023-05-25T05:26:14.918Z'
