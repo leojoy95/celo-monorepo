@@ -12,19 +12,22 @@
     "prettify": "yarn run prettier --config ../../.prettierrc.js --write '{contracts,types,lib}/**/*.+(ts|tsx|js|jsx)'",
     "build": "tsc",
     "test": "npm run pretest && jest --ci --silent --coverage --runInBand",
-    "test:verbose": "npm run pretest && jest --ci --verbose --runInBand"
+    "test:verbose": "npm run pretest && jest --ci --verbose --runInBand",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@umpirsky/country-list": "https://github.com/umpirsky/country-list#05fda51",
     "bignumber.js": "^7.2.0",
     "bn.js": "4.11.8",
     "country-data": "^0.0.31",
-    "elliptic": "^6.4.1",
+    "elliptic": "^6.5.4",
     "ethereumjs-util": "^5.2.0",
     "futoin-hkdf": "^1.0.3",
     "google-libphonenumber": "^3.2.1",
-    "lodash": "^4.17.14",
-    "web3-utils": "1.0.0-beta.37"
+    "lodash": "^4.17.21",
+    "web3-utils": "1.6.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@celo/typescript": "0.0.1",
@@ -35,7 +38,7 @@
     "@types/jest": "^24.0.13",
     "@types/lodash": "^4.14.136",
     "@types/web3": "^1.0.18",
-    "jest": "^24.8.0",
+    "jest": "^25.0.0",
     "prettier": "1.13.5",
     "typescript": "^3.3.3"
   },
@@ -50,5 +53,6 @@
       "jsx",
       "node"
     ]
-  }
+  },
+  "snyk": true
 }
