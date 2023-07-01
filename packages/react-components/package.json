@@ -27,7 +27,7 @@
     "@types/react-native": "^0.57.36",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
-    "jest": "^24.8.0",
+    "jest": "^26.0.0",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-native": "^0.59.5",
