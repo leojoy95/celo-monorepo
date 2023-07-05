@@ -133,7 +133,7 @@
     "web3": "1.0.0-beta.37"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.3",
+    "@babel/core": "^7.22.6",
     "@babel/runtime": "^7.4.3",
     "@celo/react-components": "1.0.0",
     "@celo/typescript": "0.0.1",
