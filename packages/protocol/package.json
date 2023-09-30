@@ -79,7 +79,7 @@
     "@types/underscore": "^1.8.8",
     "@types/web3": "^1.0.18",
     "cross-env": "^5.1.6",
-    "eth-gas-reporter": "^0.1.2",
+    "eth-gas-reporter": "^0.2.26",
     "nodemailer": "^4.6.8",
     "truffle-typings": "^1.0.6",
     "ts-node": "^7.0.1",
