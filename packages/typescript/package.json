@@ -9,7 +9,7 @@
     "build-rules": "tsc"
   },
   "devDependencies": {
-    "tslint": "^5.12.1",
+    "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-microsoft-contrib": "^5.1.0",
