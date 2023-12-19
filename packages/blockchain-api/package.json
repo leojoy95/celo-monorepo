@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "apollo-datasource-rest": "^0.3.1",
-    "apollo-server-express": "^2.4.2",
+    "apollo-server-express": "^3.13.0",
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
     "graphql": "^14.1.1",
@@ -29,13 +29,13 @@
     "web3-eth-abi": "1.0.0-beta.37"
   },
   "devDependencies": {
-    "@google-cloud/nodejs-repo-tools": "^2.3.3",
+    "@google-cloud/nodejs-repo-tools": "^3.0.0",
     "@types/dotenv": "^4.0.3",
     "@types/express": "^4.16.1",
     "@types/jest": "^24.0.13",
     "@types/utf8": "^2.1.6",
     "@types/web3": "^1.0.18",
-    "jest": "^24.8.0",
+    "jest": "^25.0.0",
     "ts-jest": "^24.0.0",
     "tsc-watch": "^1.0.31",
     "typescript": "^3.3.3"
