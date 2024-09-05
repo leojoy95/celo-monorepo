@@ -34,8 +34,8 @@
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
-    "@oclif/plugin-help": "^2",
-    "bip32": "^1.0.2",
+    "@oclif/plugin-help": "^4.0.0",
+    "bip32": "^3.0.0",
     "bip39": "^2.5.0",
     "bn.js": "^5.0.0",
     "chalk": "^2.4.2",
@@ -62,7 +62,7 @@
     "@types/fs-extra": "^8.0.0",
     "@types/node": "^10",
     "@types/web3": "^1.0.18",
-    "globby": "^8",
+    "globby": "^10.0.0",
     "ts-node": "^8",
     "tslint": "^5",
     "typescript": "^3.3.3"
