@@ -161,7 +161,7 @@
     "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5",
     "escape-string-regexp": "^1.0.5",
-    "graphql-code-generator": "^0.16.1",
+    "graphql-code-generator": "^0.17.0",
     "jest": "^24.8.0",
     "jest-fetch-mock": "^2.1.2",
     "jest-junit": "^6.3.0",
