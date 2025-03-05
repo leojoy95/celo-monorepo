@@ -53,7 +53,7 @@
     "patch-package": "^5.1.1",
     "postinstall-postinstall": "^1.0.0",
     "prettier": "1.13.5",
-    "pretty-quick": "^1.11.1",
+    "pretty-quick": "^4.1.0",
     "solc": "0.5.8",
     "tslint": "^5.12.1",
     "typescript-tslint-plugin": "^0.5.0"
