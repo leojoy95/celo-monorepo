@@ -37,7 +37,7 @@
     "@types/web3": "^1.0.18",
     "jest": "^24.8.0",
     "ts-jest": "^24.0.0",
-    "tsc-watch": "^1.0.31",
+    "tsc-watch": "^7.0.0",
     "typescript": "^3.3.3"
   }
 }
