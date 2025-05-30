@@ -42,6 +42,6 @@
     "firebase-tools": "^7.0.1",
     "rimraf": "2.6.3",
     "typescript": "^3.3.0",
-    "yargs": "^13.2.4"
+    "yargs": "^18.0.0"
   }
 }
