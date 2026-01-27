@@ -40,18 +40,18 @@
     "bn.js": "^5.0.0",
     "chalk": "^2.4.2",
     "cli-table": "^0.3.1",
-    "cli-ux": "^5.3.1",
+    "cli-ux": "^6.0.9",
     "debug": "^4.1.1",
     "elliptic": "^6.4.1",
     "events": "^3.0.0",
-    "firebase": "^6.2.4",
+    "firebase": "^7.14.0",
     "fs-extra": "^8.1.0",
     "path": "^0.12.7",
     "tslib": "^1",
-    "web3": "1.0.0-beta.37"
+    "web3": "1.2.0"
   },
   "devDependencies": {
-    "@oclif/dev-cli": "^1",
+    "@oclif/dev-cli": "^1.26.10",
     "@types/bip32": "^1.0.1",
     "@types/bip39": "^2.4.2",
     "@types/elliptic": "^6.4.9",
@@ -64,7 +64,7 @@
     "@types/web3": "^1.0.18",
     "globby": "^8",
     "ts-node": "^8",
-    "tslint": "^5",
+    "tslint": "^5.20.0",
     "typescript": "^3.3.3"
   },
   "files": [
